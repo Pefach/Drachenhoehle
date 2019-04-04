@@ -1,0 +1,17 @@
+{
+  "summary": {
+    "title": "WebAppModel",
+    "owner": "Peter"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "MyDiagram",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ],
+    "reviewer": "Peter"
+  }
+}
