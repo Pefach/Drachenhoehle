@@ -1,0 +1,348 @@
+{
+  "summary": {
+    "title": "Fach's first threat model with threat dragon",
+    "owner": "Fach",
+    "description": "Let's play around"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "My diagram",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0,
+        "$$hashKey": "object:18",
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 50,
+                "y": 49
+              },
+              "angle": 0,
+              "id": "13083a8b-c4af-44f0-a517-a77ea945849f",
+              "z": 1,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Human User"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 265,
+                "y": 51
+              },
+              "angle": 0,
+              "id": "97034a10-29b2-4bd8-9841-a477b1cf3aa3",
+              "z": 2,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Web brouser"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 624,
+                "y": 54
+              },
+              "angle": 0,
+              "id": "1561971a-5e26-48c8-9d0c-27ffb5a0bc4c",
+              "z": 3,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Basic authentication used for authentication at travel service",
+                  "type": "Spoofing",
+                  "description": "Brute force attacks, theft of credentials or social engineering might become a problem",
+                  "mitigation": "Restrictive password policy",
+                  "$$hashKey": "object:189"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "title": "No logging of read access",
+                  "description": "In case of sensitive data in the DB we could not tell who misused such data",
+                  "mitigation": "Non, we trust our users",
+                  "$$hashKey": "object:195"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Travel service"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "13083a8b-c4af-44f0-a517-a77ea945849f"
+              },
+              "target": {
+                "id": "97034a10-29b2-4bd8-9841-a477b1cf3aa3"
+              },
+              "vertices": [
+                {
+                  "x": 217,
+                  "y": 91
+                },
+                {
+                  "x": 258,
+                  "y": 91
+                }
+              ],
+              "id": "e0ad5a78-d490-42a4-95f6-c90402f4cee0",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "uses",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 4,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "97034a10-29b2-4bd8-9841-a477b1cf3aa3"
+              },
+              "target": {
+                "id": "1561971a-5e26-48c8-9d0c-27ffb5a0bc4c"
+              },
+              "vertices": [],
+              "id": "66df3b47-5475-4d81-b85b-995c923328f5",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "OData via HTTPS",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 5,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 624,
+                "y": 243
+              },
+              "angle": 0,
+              "id": "77056b0a-28d0-4640-a202-e63ed6237286",
+              "z": 6,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "DB is not encrypted. DB admins can leak personal data",
+                  "mitigation": "Accepted. We trust our admins",
+                  "title": "Admin access to DB",
+                  "$$hashKey": "object:202"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Any DB"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "1561971a-5e26-48c8-9d0c-27ffb5a0bc4c"
+              },
+              "target": {
+                "id": "77056b0a-28d0-4640-a202-e63ed6237286"
+              },
+              "vertices": [
+                {
+                  "x": 752,
+                  "y": 187
+                }
+              ],
+              "id": "e6587f24-e8c1-424b-95f8-d3c1c664e6df",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 7,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "x": 669,
+                "y": 237
+              },
+              "target": {
+                "x": 678,
+                "y": 141
+              },
+              "vertices": [
+                {
+                  "x": 649,
+                  "y": 231
+                },
+                {
+                  "x": 598,
+                  "y": 188
+                },
+                {
+                  "x": 614,
+                  "y": 160
+                }
+              ],
+              "id": "a2a00988-3e9a-41bf-aa03-37818df0cfaa",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 8,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 480,
+                "y": 1
+              },
+              "target": {
+                "x": 747,
+                "y": 440
+              },
+              "vertices": [
+                {
+                  "x": 526,
+                  "y": 447
+                }
+              ],
+              "id": "4f8101dd-a01d-432a-8a93-af6be1969c95",
+              "z": 9,
+              "attrs": {}
+            }
+          ]
+        },
+        "size": {
+          "height": 1316.067626953125,
+          "width": 1402.126220703125
+        }
+      }
+    ],
+    "reviewer": "Auch der Fach"
+  }
+}
