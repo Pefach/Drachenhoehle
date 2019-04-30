@@ -1,7 +1,8 @@
 {
   "summary": {
     "title": "WebAppModel",
-    "owner": "Peter"
+    "owner": "Peter",
+    "description": "This is my first example of a threat dragon model"
   },
   "detail": {
     "contributors": [],
