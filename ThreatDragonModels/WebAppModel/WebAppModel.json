@@ -74,7 +74,7 @@
                   "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "actor 1"
+                  "text": "Internet facing"
                 },
                 ".element-text": {
                   "class": "element-text hasOpenThreats isInScope"
