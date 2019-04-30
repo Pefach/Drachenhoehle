@@ -19,8 +19,8 @@
                 "height": 100
               },
               "position": {
-                "x": 50,
-                "y": 50
+                "x": 46,
+                "y": 128
               },
               "angle": 0,
               "id": "5ac24348-1c96-42d8-a116-67a9cd8cf973",
@@ -46,7 +46,7 @@
               },
               "position": {
                 "x": 331,
-                "y": 222
+                "y": 223
               },
               "angle": 0,
               "id": "8591e510-4e7f-4c63-8666-8045b909bc01",
@@ -60,6 +60,12 @@
                   "type": "Spoofing",
                   "description": "Des isch schlecht...",
                   "mitigation": "Non, we have trust"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "No secure session management",
+                  "type": "Spoofing"
                 }
               ],
               "attrs": {
@@ -150,10 +156,14 @@
                 "y": 20
               },
               "target": {
-                "x": 110,
-                "y": 100
+                "id": "5ac24348-1c96-42d8-a116-67a9cd8cf973"
               },
-              "vertices": [],
+              "vertices": [
+                {
+                  "x": 69,
+                  "y": 59
+                }
+              ],
               "id": "2acb0400-0271-4393-9b97-8b21daf70c34",
               "labels": [
                 {
