@@ -26,16 +26,25 @@
               "angle": 0,
               "id": "5ac24348-1c96-42d8-a116-67a9cd8cf973",
               "z": 1,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Spoofing",
+                  "type": "Spoofing",
+                  "description": "Ich finde das gar nicht schlecht----"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "process 0"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -47,7 +56,7 @@
               },
               "position": {
                 "x": 331,
-                "y": 223
+                "y": 225
               },
               "angle": 0,
               "id": "8591e510-4e7f-4c63-8666-8045b909bc01",
@@ -67,6 +76,13 @@
                   "severity": "High",
                   "title": "No secure session management",
                   "type": "Spoofing"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Titel",
+                  "type": "Repudiation",
+                  "description": "bbbbb"
                 }
               ],
               "attrs": {
