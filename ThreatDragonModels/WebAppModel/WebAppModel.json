@@ -41,7 +41,7 @@
                   "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "process 0"
+                  "text": "Select product"
                 },
                 ".element-text": {
                   "class": "element-text hasOpenThreats isInScope"
@@ -90,7 +90,7 @@
                   "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "Internet facing"
+                  "text": "Backend"
                 },
                 ".element-text": {
                   "class": "element-text hasOpenThreats isInScope"
@@ -113,7 +113,7 @@
                   "position": 0.5,
                   "attrs": {
                     "text": {
-                      "text": "flow 2",
+                      "text": "oData",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -153,12 +153,13 @@
                   "type": "Spoofing"
                 }
               ],
+              "outOfScope": true,
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isOutOfScope"
                 },
                 "text": {
-                  "text": "actor 3"
+                  "text": "External service"
                 },
                 ".element-text": {
                   "class": "element-text hasOpenThreats isInScope"
@@ -214,14 +215,19 @@
               "target": {
                 "id": "a8400659-771f-4100-ae07-f9ef9406fb84"
               },
-              "vertices": [],
+              "vertices": [
+                {
+                  "x": 567,
+                  "y": 139
+                }
+              ],
               "id": "84a0f265-15e8-4415-bae6-2e4a1d06e614",
               "labels": [
                 {
                   "position": 0.5,
                   "attrs": {
                     "text": {
-                      "text": "flow 5",
+                      "text": "soap",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -238,6 +244,38 @@
                   "class": "connection hasNoOpenThreats isInScope"
                 }
               }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 30,
+                "y": 20
+              },
+              "target": {
+                "x": 110,
+                "y": 100
+              },
+              "vertices": [],
+              "id": "57ecad80-a2c7-4280-8e31-0d60249b816f",
+              "z": 7,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 30,
+                "y": 20
+              },
+              "target": {
+                "x": 110,
+                "y": 100
+              },
+              "vertices": [],
+              "id": "94bb1835-d4bc-4231-aff9-75140382b63b",
+              "z": 8,
+              "attrs": {}
             }
           ]
         },
